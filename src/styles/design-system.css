@@ -63,12 +63,17 @@
 .poster-title>span{font-size:clamp(10px,1vw,15px);font-weight:500;letter-spacing:.03em;color:#f6f6f1;opacity:.75}
 .poster-title>strong{font-size:clamp(26px,3.5vw,64px);line-height:.94;letter-spacing:-.075em;font-weight:650;overflow-wrap:anywhere}
 .poster-title>small{font-size:clamp(10px,1vw,15px);font-weight:400;line-height:1.35;opacity:.85}
-.cover-poster.furniture .poster-title,.cover-poster.window .poster-title{color:#17200e;text-shadow:none}
-.cover-poster.furniture .poster-title>span,.cover-poster.window .poster-title>span{color:inherit;opacity:.8}
+.cover-poster.window .poster-title{color:#17200e;text-shadow:none}
+.cover-poster.window .poster-title>span{color:inherit;opacity:.8}
+.cover-poster.furniture .cover-poster-art:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,14,4,.63) 0%,rgba(10,14,4,.37) 36%,rgba(10,14,4,0) 67%);pointer-events:none}
+.cover-poster.furniture .poster-title{color:#fff;top:30%;left:6.5%;width:43%;text-shadow:0 2px 22px #0005}
+.cover-poster.furniture .poster-title>span{color:#fff;opacity:.87}
 .cover-poster.cover--large .poster-title{left:var(--pad);width:43%;gap:19px}
 .cover-poster.cover--large .poster-title>strong{font-size:clamp(44px,7.7vw,130px)}
 .cover-poster.cover--large .poster-title>span,.cover-poster.cover--large .poster-title>small{font-size:clamp(14px,1.4vw,22px)}
 .project:hover .cover-poster-art,.next a:hover .cover-poster-art{transform:scale(1.065)}
 @media(max-width:800px){.cover-poster .poster-title{left:6%;width:44%;gap:8px}.poster-title>strong{font-size:clamp(28px,6.5vw,63px)}.poster-title>span,.poster-title>small{font-size:clamp(10px,2.2vw,14px)}.cover-poster.cover--large .poster-title{width:45%;left:6%}.cover-poster.cover--large .poster-title>strong{font-size:clamp(36px,8.4vw,72px)}.cover-poster.cover--large .cover-poster-art{background-position:60% 50%}}
 @media(max-width:420px){.poster-title>strong{font-size:clamp(25px,6.3vw,31px)}.cover-poster .poster-title{gap:6px}.cover-poster.cover--large .poster-title>strong{font-size:clamp(30px,7vw,40px)}}
+.cover-poster.furniture.cover--large .poster-title{top:33%;left:var(--pad);width:43%}
+@media(max-width:800px){.cover-poster.furniture .poster-title,.cover-poster.furniture.cover--large .poster-title{top:30%;left:6%;width:44%}}
 @media(prefers-reduced-motion:reduce){.project:hover .cover-poster-art,.next a:hover .cover-poster-art{transform:none!important}}
