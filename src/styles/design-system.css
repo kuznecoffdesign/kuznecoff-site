@@ -6,3 +6,19 @@
 @media(max-width:1100px){.package{padding:25px}.package-art{height:82px;margin-bottom:22px}.tier-icon{width:48px;height:48px;border-radius:12px}.tier-icon svg{width:24px;height:24px}.package h3{font-size:30px}.package-price{font-size:43px}.package-row{min-height:89px;gap:6px 9px}.package-row dd{font-size:15px}.package-description{font-size:15px}}
 @media(max-width:780px){.packages{gap:18px}.package{padding:26px}.package-art{height:82px;margin-bottom:25px}.package-description{min-height:0;margin:10px 0 25px}.package-price{font-size:49px;margin-bottom:26px}.package-row{min-height:70px;grid-template-columns:27px minmax(0,1fr);gap:5px 12px}.package-row dt,.package-row dd{grid-column:2;text-align:left}.package-row dd{font-size:16px}.package-action{min-height:58px}.floating-nav{background:rgba(20,20,20,.86);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}}
 @media(prefers-reduced-motion:reduce){.package:hover,.package:hover .tier-icon,.package-action:hover{transform:none!important}}
+
+/* Keep the secondary hero control readable throughout the hover animation. */
+.offer-hero .hero-actions .offer-secondary:before{background:#efefed}
+.offer-hero .hero-actions .offer-secondary:hover{color:#111;background:#efefed;border-color:#efefed}
+
+/* Project milestones: a legible checklist instead of a diagonal chain. */
+.graphic-process i{width:19px;height:19px;border-radius:5px;left:5px;top:6px;background:transparent;border:1.5px solid currentColor;opacity:.9}
+.graphic-process i:nth-child(2){left:5px;top:35px}
+.graphic-process i:nth-child(3){left:5px;top:64px}
+.graphic-process i:before{content:'';position:absolute;width:6px;height:3px;left:5px;top:5px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg)}
+.graphic-process i:after{content:'';position:absolute;left:29px;top:8px;width:61px;height:1.5px;background:currentColor;opacity:.65;border-radius:2px;transform-origin:left;transition:transform .5s}
+.graphic-process i:nth-child(2):after{width:47px}
+.graphic-process i:nth-child(3):after{width:55px}
+.graphic-process span{display:none}
+.about-card:hover .graphic-process i{background:transparent;transform:none}
+.about-card:hover .graphic-process i:after{transform:scaleX(1.08)}
