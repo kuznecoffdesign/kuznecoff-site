@@ -22,3 +22,6 @@
 .graphic-process span{display:none}
 .about-card:hover .graphic-process i{background:transparent;transform:none}
 .about-card:hover .graphic-process i:after{transform:scaleX(1.08)}
+
+/* Integrate the photographic black studio backdrop with the hero canvas. */
+.hero-stage.offer-image img{mix-blend-mode:lighten;filter:none}
