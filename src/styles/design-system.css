@@ -55,3 +55,20 @@
 @media(max-width:800px){.work-artwork{width:90%;gap:8px;height:80%}.cover-real.cover--large .work-artwork{width:91%;height:78%;gap:8px}.cover-real.cover--large{min-height:330px;height:68svh}.case-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.case-artwork a,.case-artwork img{border-radius:12px}.case-artwork figcaption{font-size:12px}.case-artwork.gallery-wide{grid-column:span 2}}
 @media(max-width:420px){.cover-real .cover-tag{font-size:9px;bottom:10px;left:12px}.cover-real.cover--large{height:52svh;min-height:290px}.cover-real.cover--large .cover-tag{bottom:12px}.case-gallery--mixed{grid-template-columns:1fr}.case-gallery--mixed .gallery-wide{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){.project:hover .work-artwork,.case-artwork a:hover img{transform:none!important}}
+
+/* Art-directed case thumbnails. Original card designs remain inside each case. */
+.cover.cover-poster{display:block;position:relative;background:#171717;overflow:hidden;color:#f5f5f1}
+.cover-poster-art{position:absolute;inset:0;background-size:cover;background-position:center center;background-repeat:no-repeat;transition:transform .9s cubic-bezier(.22,.61,.36,1);pointer-events:none}
+.cover-poster .poster-title{position:absolute;z-index:2;left:clamp(22px,5vw,64px);top:50%;transform:translateY(-50%);width:43%;display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-shadow:0 1px 24px #0003}
+.poster-title>span{font-size:clamp(10px,1vw,15px);font-weight:500;letter-spacing:.03em;color:#f6f6f1;opacity:.75}
+.poster-title>strong{font-size:clamp(26px,3.5vw,64px);line-height:.94;letter-spacing:-.075em;font-weight:650;overflow-wrap:anywhere}
+.poster-title>small{font-size:clamp(10px,1vw,15px);font-weight:400;line-height:1.35;opacity:.85}
+.cover-poster.furniture .poster-title,.cover-poster.window .poster-title{color:#17200e;text-shadow:none}
+.cover-poster.furniture .poster-title>span,.cover-poster.window .poster-title>span{color:inherit;opacity:.8}
+.cover-poster.cover--large .poster-title{left:var(--pad);width:43%;gap:19px}
+.cover-poster.cover--large .poster-title>strong{font-size:clamp(44px,7.7vw,130px)}
+.cover-poster.cover--large .poster-title>span,.cover-poster.cover--large .poster-title>small{font-size:clamp(14px,1.4vw,22px)}
+.project:hover .cover-poster-art,.next a:hover .cover-poster-art{transform:scale(1.065)}
+@media(max-width:800px){.cover-poster .poster-title{left:6%;width:44%;gap:8px}.poster-title>strong{font-size:clamp(28px,6.5vw,63px)}.poster-title>span,.poster-title>small{font-size:clamp(10px,2.2vw,14px)}.cover-poster.cover--large .poster-title{width:45%;left:6%}.cover-poster.cover--large .poster-title>strong{font-size:clamp(36px,8.4vw,72px)}.cover-poster.cover--large .cover-poster-art{background-position:60% 50%}}
+@media(max-width:420px){.poster-title>strong{font-size:clamp(25px,6.3vw,31px)}.cover-poster .poster-title{gap:6px}.cover-poster.cover--large .poster-title>strong{font-size:clamp(30px,7vw,40px)}}
+@media(prefers-reduced-motion:reduce){.project:hover .cover-poster-art,.next a:hover .cover-poster-art{transform:none!important}}
