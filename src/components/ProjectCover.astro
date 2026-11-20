@@ -1,0 +1,4 @@
+---
+const {project,large=false}=Astro.props;
+---
+<div class:list={['cover',project.theme,{'cover--large':large}]}><div class="cover-grid"></div>{project.theme==='detail' && <div class="cover-photo"/>}<div class="cover-type"><strong>{project.name}</strong><small>{project.industry}</small></div><span class="cover-tag">{project.status==='Реальный проект'?'Архив / эскиз обложки':'Концепция / в разработке'}</span></div>

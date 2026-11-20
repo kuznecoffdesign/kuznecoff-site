@@ -1,2 +1,11 @@
-# kuznecoff-site
-Kuznecoff design portfolio website
+# kuznecoff.design — портфолио
+
+Черновой сайт на Astro. Рабочая структура, фильтр и отдельные страницы кейсов; оригиналы Figma ещё необходимо заменить на экспортированные материалы. Демонстрационные проекты помечены отдельно.
+
+```sh
+npm install
+npm run dev
+npm run build
+```
+
+Данные проектов: `src/data/projects.js`. Общие стили: `src/styles/global.css`.
