@@ -1,4 +1,6 @@
 ---
 const {project,large=false}=Astro.props;
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const imagePath=(file)=>`${base}/images/cases/${project.slug}/${file}`;
 ---
-<div class:list={['cover',project.theme,{'cover--large':large}]}><div class="cover-grid"></div>{project.theme==='detail' && <div class="cover-photo"/>}<div class="cover-type"><strong>{project.name}</strong><small>{project.industry}</small></div><span class="cover-tag">{project.status==='Реальный проект'?'Архив / эскиз обложки':'Концепция / в разработке'}</span></div>
+{project.coverImages ? <div class:list={['cover','cover-real',project.theme,{'cover--large':large,'cover-real--mixed':project.coverStyle==='mixed'}]}><div class="work-artwork">{project.coverImages.map((file,i)=><img src={imagePath(file)} alt={`${project.name} — оригинальный материал ${i+1}`} loading={large?'eager':'lazy'} decoding="async"/>)}</div><span class="cover-tag">Яндекс Карты / Комплексная упаковка</span></div> : <div class:list={['cover',project.theme,{'cover--large':large}]}><div class="cover-grid"></div>{project.theme==='detail' && <div class="cover-photo"/>}<div class="cover-type"><strong>{project.name}</strong><small>{project.industry}</small></div><span class="cover-tag">Концепция / в разработке</span></div>}
