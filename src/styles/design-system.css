@@ -24,4 +24,7 @@
 .about-card:hover .graphic-process i:after{transform:scaleX(1.08)}
 
 /* Integrate the photographic black studio backdrop with the hero canvas. */
-.hero-stage.offer-image img{mix-blend-mode:lighten;filter:none}
+.hero-stage.offer-image img{mix-blend-mode:lighten;filter:none;transform:translate(calc(var(--mx,0)*-6px),calc(var(--my,0)*-6px)) scaleX(-1) scale(1.16);mask-image:linear-gradient(to right,transparent 0%,#000 13%,#000 87%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 11%,#000 83%,transparent 100%);mask-composite:intersect;-webkit-mask-composite:source-in;transform-origin:center}
+.hero-stage.offer-image:hover img{transform:translate(calc(var(--mx,0)*-12px),calc(var(--my,0)*-12px)) scaleX(-1) scale(1.19)}
+@media(max-width:900px){.hero-stage.offer-image img{transform:scaleX(-1) scale(1.08)}.hero-stage.offer-image:hover img{transform:scaleX(-1) scale(1.1)}}
+@media(prefers-reduced-motion:reduce){.hero-stage.offer-image img,.hero-stage.offer-image:hover img{transform:scaleX(-1) scale(1.13)!important}}
