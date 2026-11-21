@@ -28,3 +28,11 @@
 }
 
 .footline .footer-brand{font:800 24px/1.1 Arial,Helvetica,sans-serif;letter-spacing:-.08em;color:var(--fg);white-space:nowrap}.footer-brand>span{color:#777}
+
+/* Consistent wordmark across navigation and footer. */
+body .floating-header .brand, body .footline .footer-brand{font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:24px;line-height:1.1;letter-spacing:-.08em;white-space:nowrap}
+body .floating-header .brand>span,body .footline .footer-brand>span{display:inline-block;margin-inline:.055em;color:inherit}
+@media(max-width:900px){body .floating-header .brand{font-size:20px}}
+@media(max-width:450px){body .floating-header .nav-contact{display:none}}
+
+@media(min-width:901px){body .extra-services .service{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) 12rem}body .extra-services .service strong{text-align:right;justify-self:end}}
