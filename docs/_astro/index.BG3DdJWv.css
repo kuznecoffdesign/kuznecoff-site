@@ -26,3 +26,5 @@
   body .case .cover-poster.cover--large .poster-title > span,
   body .case .cover-poster.cover--large .poster-title > small { font-size: 18px; }
 }
+
+.footline .footer-brand{font:800 24px/1.1 Arial,Helvetica,sans-serif;letter-spacing:-.08em;color:var(--fg);white-space:nowrap}.footer-brand>span{color:#777}
