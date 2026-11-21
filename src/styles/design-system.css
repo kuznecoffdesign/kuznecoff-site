@@ -6,3 +6,85 @@
 @media(max-width:1100px){.package{padding:25px}.package-art{height:82px;margin-bottom:22px}.tier-icon{width:48px;height:48px;border-radius:12px}.tier-icon svg{width:24px;height:24px}.package h3{font-size:30px}.package-price{font-size:43px}.package-row{min-height:89px;gap:6px 9px}.package-row dd{font-size:15px}.package-description{font-size:15px}}
 @media(max-width:780px){.packages{gap:18px}.package{padding:26px}.package-art{height:82px;margin-bottom:25px}.package-description{min-height:0;margin:10px 0 25px}.package-price{font-size:49px;margin-bottom:26px}.package-row{min-height:70px;grid-template-columns:27px minmax(0,1fr);gap:5px 12px}.package-row dt,.package-row dd{grid-column:2;text-align:left}.package-row dd{font-size:16px}.package-action{min-height:58px}.floating-nav{background:rgba(20,20,20,.86);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}}
 @media(prefers-reduced-motion:reduce){.package:hover,.package:hover .tier-icon,.package-action:hover{transform:none!important}}
+
+/* Keep the secondary hero control readable throughout the hover animation. */
+.offer-hero .hero-actions .offer-secondary:before{background:#efefed}
+.offer-hero .hero-actions .offer-secondary:hover{color:#111;background:#efefed;border-color:#efefed}
+
+/* Project milestones: a legible checklist instead of a diagonal chain. */
+.graphic-process i{width:19px;height:19px;border-radius:5px;left:5px;top:6px;background:transparent;border:1.5px solid currentColor;opacity:.9}
+.graphic-process i:nth-child(2){left:5px;top:35px}
+.graphic-process i:nth-child(3){left:5px;top:64px}
+.graphic-process i:before{content:'';position:absolute;width:6px;height:3px;left:5px;top:5px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg)}
+.graphic-process i:after{content:'';position:absolute;left:29px;top:8px;width:61px;height:1.5px;background:currentColor;opacity:.65;border-radius:2px;transform-origin:left;transition:transform .5s}
+.graphic-process i:nth-child(2):after{width:47px}
+.graphic-process i:nth-child(3):after{width:55px}
+.graphic-process span{display:none}
+.about-card:hover .graphic-process i{background:transparent;transform:none}
+.about-card:hover .graphic-process i:after{transform:scaleX(1.08)}
+
+/* Integrate the photographic black studio backdrop with the hero canvas. */
+.hero-stage.offer-image .hero-render{display:block;width:100%;aspect-ratio:1448/1086;background:url('/images/hero-business-box.png') center/contain no-repeat;mix-blend-mode:lighten;filter:none;pointer-events:none;transform:translate(calc(var(--mx,0)*-6px),calc(var(--my,0)*-6px)) scaleX(-1) scale(1.16);mask-image:linear-gradient(to right,transparent 0%,#000 13%,#000 87%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 11%,#000 83%,transparent 100%);mask-composite:intersect;-webkit-mask-composite:source-in;transform-origin:center;transition:transform 1.5s cubic-bezier(.22,.61,.36,1)}
+.hero-stage.offer-image:hover .hero-render{transform:translate(calc(var(--mx,0)*-12px),calc(var(--my,0)*-12px)) scaleX(-1) scale(1.19)}
+@media(max-width:900px){.hero-stage.offer-image .hero-render{transform:scaleX(-1) scale(1.08)}.hero-stage.offer-image:hover .hero-render{transform:scaleX(-1) scale(1.1)}}
+@media(prefers-reduced-motion:reduce){.hero-stage.offer-image .hero-render,.hero-stage.offer-image:hover .hero-render{transform:scaleX(-1) scale(1.13)!important;transition:none!important}}
+
+/* Real portfolio artwork, sourced from the original Figma frames. */
+.cover.cover-real{isolation:isolate;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 32%,#303b3b,#141a1a 56%,#0d1010);color:#f5f5f0}
+.cover-real.ray{background:radial-gradient(ellipse at 50% 30%,#39333f,#1d1b21 58%,#101012)}
+.cover-real.furniture{background:radial-gradient(ellipse at 50% 30%,#c8dc82,#829e4b 65%,#657b39);color:#17200d}
+.cover-real:before,.cover-real:after{display:none}
+.work-artwork{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:clamp(6px,1.2vw,18px);width:89%;height:83%;max-width:1200px;position:relative;z-index:1;transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+.work-artwork img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;filter:drop-shadow(0 15px 22px #0005);border-radius:10px;transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+.cover-real:not(.cover-real--mixed) .work-artwork{grid-template-rows:minmax(0,1fr)}
+.cover-real--mixed .work-artwork{grid-template-columns:1.08fr .92fr;grid-template-rows:1fr 1fr;width:88%;height:78%;gap:10px}
+.cover-real--mixed .work-artwork img:first-child{grid-row:span 2;object-fit:contain}
+.cover-real--mixed .work-artwork img:nth-child(n+2){object-fit:contain}
+.project:hover .work-artwork{transform:scale(1.035)}
+.cover-real .cover-tag{font-size:11px;font-weight:500;letter-spacing:.02em;left:18px;bottom:15px;z-index:2;color:inherit;opacity:.82}
+.cover-real.cover--large .work-artwork{width:min(83%,1100px);height:82%;gap:clamp(12px,2.2vw,30px)}
+.cover-real.cover--large .cover-tag{bottom:22px;left:var(--pad)}
+.case-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,36px);align-items:start}
+.case-gallery--mixed{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1100px;margin:auto}
+.case-artwork{margin:0;min-width:0}
+.case-artwork a{display:block;border-radius:18px;overflow:hidden;background:#e6e6e1;box-shadow:0 8px 26px #0000000a}
+.case-artwork img{display:block;width:100%;height:auto;border-radius:18px;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
+.case-artwork a:hover img{transform:scale(1.018)}
+.case-artwork figcaption{font-size:14px;font-weight:600;color:#454545;margin:14px 2px 0;line-height:1.45}
+.case-artwork.gallery-wide{grid-column:span 2}
+@media(max-width:800px){.work-artwork{width:90%;gap:8px;height:80%}.cover-real.cover--large .work-artwork{width:91%;height:78%;gap:8px}.cover-real.cover--large{min-height:330px;height:68svh}.case-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.case-artwork a,.case-artwork img{border-radius:12px}.case-artwork figcaption{font-size:12px}.case-artwork.gallery-wide{grid-column:span 2}}
+@media(max-width:420px){.cover-real .cover-tag{font-size:9px;bottom:10px;left:12px}.cover-real.cover--large{height:52svh;min-height:290px}.cover-real.cover--large .cover-tag{bottom:12px}.case-gallery--mixed{grid-template-columns:1fr}.case-gallery--mixed .gallery-wide{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){.project:hover .work-artwork,.case-artwork a:hover img{transform:none!important}}
+
+/* Art-directed case thumbnails. Original card designs remain inside each case. */
+.cover.cover-poster{display:block;position:relative;background:#171717;overflow:hidden;color:#f5f5f1}
+.cover-poster-art{position:absolute;inset:0;background-size:cover;background-position:center center;background-repeat:no-repeat;transition:transform .9s cubic-bezier(.22,.61,.36,1);pointer-events:none}
+.cover-poster .poster-title{position:absolute;z-index:2;left:clamp(22px,5vw,64px);top:50%;transform:translateY(-50%);width:43%;display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-shadow:0 1px 24px #0003}
+.poster-title>span{font-size:clamp(10px,1vw,15px);font-weight:500;letter-spacing:.03em;color:#f6f6f1;opacity:.75}
+.poster-title>strong{font-size:clamp(26px,3.5vw,64px);line-height:.94;letter-spacing:-.075em;font-weight:650;overflow-wrap:anywhere}
+.poster-title>small{font-size:clamp(10px,1vw,15px);font-weight:400;line-height:1.35;opacity:.85}
+.cover-poster.window .poster-title{color:#17200e;text-shadow:none}
+.cover-poster.window .poster-title>span{color:inherit;opacity:.8}
+.cover-poster.furniture .cover-poster-art:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,14,4,.63) 0%,rgba(10,14,4,.37) 36%,rgba(10,14,4,0) 67%);pointer-events:none}
+.cover-poster.furniture .poster-title{color:#fff;top:30%;left:6.5%;width:43%;text-shadow:0 2px 22px #0005}
+.cover-poster.furniture .poster-title>span{color:#fff;opacity:.87}
+.cover-poster.cover--large .poster-title{left:var(--pad);width:43%;gap:19px}
+.cover-poster.cover--large .poster-title>strong{font-size:clamp(44px,7.7vw,130px)}
+.cover-poster.cover--large .poster-title>span,.cover-poster.cover--large .poster-title>small{font-size:clamp(14px,1.4vw,22px)}
+.project:hover .cover-poster-art,.next a:hover .cover-poster-art{transform:scale(1.065)}
+@media(max-width:800px){.cover-poster .poster-title{left:6%;width:44%;gap:8px}.poster-title>strong{font-size:clamp(28px,6.5vw,63px)}.poster-title>span,.poster-title>small{font-size:clamp(10px,2.2vw,14px)}.cover-poster.cover--large .poster-title{width:45%;left:6%}.cover-poster.cover--large .poster-title>strong{font-size:clamp(36px,8.4vw,72px)}.cover-poster.cover--large .cover-poster-art{background-position:60% 50%}}
+@media(max-width:420px){.poster-title>strong{font-size:clamp(25px,6.3vw,31px)}.cover-poster .poster-title{gap:6px}.cover-poster.cover--large .poster-title>strong{font-size:clamp(30px,7vw,40px)}}
+.cover-poster.furniture.cover--large .poster-title{top:33%;left:var(--pad);width:43%}
+@media(max-width:800px){.cover-poster.furniture .poster-title,.cover-poster.furniture.cover--large .poster-title{top:30%;left:6%;width:44%}}
+@media(prefers-reduced-motion:reduce){.project:hover .cover-poster-art,.next a:hover .cover-poster-art{transform:none!important}}
+
+.demo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,30px)}
+.demo-card{display:flex;flex-direction:column;background:#fdfdfb;border:1px solid #d8d8d4;border-radius:24px;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.demo-card:hover{transform:translateY(-5px);box-shadow:0 14px 38px #00000013}
+.demo-thumb{aspect-ratio:1.45;background-size:cover;background-position:center;background-color:#1e1e1e}
+.demo-card-body{padding:clamp(20px,2vw,30px);display:flex;flex-direction:column;flex:1}
+.demo-card h3{font-size:clamp(24px,2.5vw,38px);letter-spacing:-.055em;line-height:1.05;margin-bottom:12px}
+.demo-card p{font-size:16px;line-height:1.5;color:#656565;margin-bottom:23px;flex:1}
+.demo-card span{display:block;border-top:1px solid #deded9;padding-top:15px;font-size:15px;font-weight:600}
+@media(max-width:850px){.demo-grid{grid-template-columns:1fr}.demo-thumb{aspect-ratio:1.8}.demo-card-body{padding:24px}.demo-card p{margin-bottom:16px}}
+@media(prefers-reduced-motion:reduce){.demo-card:hover{transform:none}}
