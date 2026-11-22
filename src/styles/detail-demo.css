@@ -4,3 +4,43 @@
 @media(max-width:900px){.dw-header nav{display:none}.dw-hero{min-height:650px}.dw-hero:before{background:linear-gradient(90deg,#090a0bf5 0%,#090a0ba0 35%,#090a0b34 90%),var(--hero) 65% center/cover no-repeat}.dw-process-grid{grid-template-columns:repeat(2,1fr)}.dw-vk-layout,.dw-maps-layout{grid-template-columns:1fr}.dw-map-preview{min-height:250px}.dw-vk-sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}.dw-platform-bio{flex-wrap:wrap}.dw-platform-bio .dw-ui-button{width:100%}}
 @media(max-width:650px){.dw-demo-bar{font-size:10px;gap:8px}.dw-header{padding:14px var(--dw-pad);gap:8px}.dw-brand b{font-size:34px}.dw-brand>span{font-size:9px}.dw-small{font-size:12px;padding:9px 11px;min-height:39px}.dw-hero{min-height:620px;padding:59px var(--dw-pad)}.dw-hero:before{background:linear-gradient(180deg,#090a0b57,#090a0bcb 50%,#090a0b),var(--hero) 67% center/cover no-repeat}.dw-hero h1{font-size:clamp(62px,15vw,98px)}.dw-hero-inner>p:not(.dw-eyebrow){font-size:17px}.dw-hero-bottom{font-size:9px}.dw-section-heading{display:block;margin-bottom:30px}.dw-section-heading>p{margin-top:23px}.dw-service-grid{grid-template-columns:1fr;gap:16px}.dw-price-list>div{grid-template-columns:1fr auto;gap:8px;padding:20px 0}.dw-price-list h3{font-size:23px}.dw-price-list span{grid-row:2;font-size:12px}.dw-price-list b{grid-column:2;grid-row:1 / span 2;font-size:19px}.dw-process-grid{gap:9px}.dw-process-grid article{padding:20px 15px}.dw-process-grid h3{font-size:20px;margin:19px 0 8px}.dw-process-grid p{font-size:13px}.dw-estimate-panel{grid-template-columns:1fr}.dw-footer{display:grid;gap:25px}.dw-platform-container{width:calc(100% - 22px);margin:15px auto 50px}.dw-platform-head{padding:14px}.dw-platform-head strong{font-size:15px}.dw-platform-head a{font-size:11px}.dw-platform-bio{padding:19px;gap:12px}.dw-platform-bio img{width:62px;height:62px}.dw-ui-body{padding:19px}.dw-maps-stories{grid-template-columns:repeat(3,minmax(0,1fr))}.dw-vk-sidebar{grid-template-columns:1fr}.dw-vk-post{padding:17px}.dw-vk-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Detail Works: automotive workshop aesthetic, independent from the portfolio. */
+.dw-site{--dw-bg:#101316;--dw-panel:#1c2227;--dw-line:#39434a;--dw-muted:#aeb8bf;--dw-accent:#ffad5b;background:var(--dw-bg);font-family:Arial,Helvetica,sans-serif}
+.dw-site .dw-header{position:sticky;background:#14191d;backdrop-filter:none;border-bottom:2px solid var(--dw-accent);padding-block:15px}
+.dw-site .dw-header .dw-brand b{font-size:34px;letter-spacing:-.09em}
+.dw-site .dw-hero{min-height:clamp(480px,68vh,700px);padding-block:68px;display:flex;justify-content:center}
+.dw-site .dw-hero:before{background:linear-gradient(90deg,#101316 0%,#101316e8 28%,#10131680 54%,#10131610 100%),var(--hero) center 57%/cover no-repeat}
+.dw-site .dw-hero-inner{max-width:620px}
+.dw-site .dw-hero h1{font-size:clamp(44px,5.9vw,88px);line-height:.98;letter-spacing:-.045em;font-weight:800;text-transform:uppercase}
+.dw-site .dw-hero-inner>p:not(.dw-eyebrow){font-size:18px;max-width:470px;margin-top:23px}
+.dw-site .dw-eyebrow{font-size:12px;letter-spacing:.16em;color:var(--dw-accent);font-weight:700}
+.dw-site .dw-hero-bottom{font-size:11px;line-height:1.4}
+.dw-site .dw-section{padding-block:clamp(56px,6.5vw,100px)}
+.dw-site .dw-section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.62fr);align-items:end;margin-bottom:36px;gap:24px}
+.dw-site .dw-section h2{font-size:clamp(34px,4.3vw,60px);line-height:1.05;letter-spacing:-.035em;font-weight:750}
+.dw-site .dw-section h2 br{display:none}
+.dw-site .dw-section-heading>p{font-size:17px;line-height:1.6}
+.dw-site .dw-button,.dw-site .dw-ghost{border-radius:4px;letter-spacing:.015em}
+.dw-site .dw-service-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.dw-site .dw-service{border-radius:6px;display:flex;flex-direction:column}
+.dw-site .dw-service-image{aspect-ratio:1.22}
+.dw-site .dw-service-image span{border-radius:2px;top:10px;left:10px;padding:7px 10px}
+.dw-site .dw-service-info{padding:20px;display:flex;flex-direction:column;flex:1}
+.dw-site .dw-service-info h3{font-size:clamp(21px,2vw,27px);letter-spacing:-.025em;line-height:1.15}
+.dw-site .dw-service-info p{font-size:16px;flex:1}
+.dw-site .dw-service-bottom{flex-wrap:wrap}
+.dw-site .dw-service-bottom b{font-size:18px}
+.dw-site .dw-price-list h3{font-size:clamp(21px,2.2vw,29px)}
+.dw-site .dw-price-list b{font-size:22px}
+.dw-site .dw-process-grid article,.dw-site .dw-estimate-panel{border-radius:6px}
+.dw-site .dw-process-grid h3{font-size:22px}
+.dw-site .dw-process-grid p{font-size:16px}
+.dw-site .dw-estimate-summary>strong{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}
+.dw-site .dw-faq summary{font-size:clamp(18px,1.7vw,23px)}
+.dw-site .dw-footer{display:flex;justify-content:space-between;padding-block:32px}
+.dw-site .dw-light{background:#e5e8e8;color:#172128}
+.dw-site .dw-light .dw-section-heading>p{color:#51616a}
+.dw-site .dw-light .dw-eyebrow{color:#a95717}
+@media(max-width:1050px){.dw-site .dw-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.dw-site .dw-hero{min-height:510px;padding-block:56px}.dw-site .dw-hero:before{background:linear-gradient(180deg,#10131630,#101316ba 45%,#101316 100%),var(--hero) 66% center/cover no-repeat}.dw-site .dw-hero h1{font-size:clamp(38px,10vw,60px)}.dw-site .dw-section-heading{display:block}.dw-site .dw-section-heading>p{margin-top:14px}.dw-site .dw-service-grid{grid-template-columns:1fr}.dw-site .dw-process-grid{grid-template-columns:1fr}.dw-site .dw-footer{flex-wrap:wrap}}
