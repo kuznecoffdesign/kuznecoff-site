@@ -5,3 +5,4 @@
 - Every embedded business website should have a distinct brand style and a typography hierarchy designed for its audience, not a reproduction of the portfolio. Aim for 16–20px body text and restrained responsive headings.
 - Portfolio pricing shows starting amounts, concise inclusions, and leads to a personal commercial proposal. Do not promise payment terms or exact scope until agreed.
 - Build and verify docs output as well as Astro source. Publish only the dedicated preview from develop.
+- In automotive case websites use coherent, documentary-style imagery: realistic working environments, everyday vehicles as well as premium models, no fabricated client results. Label synthetic before/after comparisons as visualizations.
