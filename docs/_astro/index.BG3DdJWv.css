@@ -56,3 +56,5 @@ body .floating-header .brand>span,body .footline .footer-brand>span{display:inli
 .package-row{min-height:0}
 .package-note{max-width:850px}
 @media(max-width:800px){.faq-layout{grid-template-columns:1fr}.faq-intro p{font-size:16px}.faq-list summary{padding:18px 0}.faq-list details p{font-size:16px;padding-right:16px}}
+
+.case-return{position:fixed;left:clamp(14px,2.5vw,32px);bottom:clamp(14px,2.5vw,28px);z-index:120;display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff35;border-radius:999px;background:#171819ed;color:#f5f5f3;padding:12px 19px;box-shadow:0 6px 25px #0003;font:600 14px/1.2 system-ui,Arial,sans-serif;text-decoration:none;backdrop-filter:blur(12px);white-space:nowrap}.case-return:hover{background:#f5f5f3;color:#171819;border-color:#f5f5f3}.case-return:focus-visible{outline:2px solid #e3a164;outline-offset:4px}@media(max-width:600px){.case-return{font-size:13px;padding:11px 16px;bottom:12px;left:12px}}
