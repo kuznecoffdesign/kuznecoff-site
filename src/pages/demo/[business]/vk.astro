@@ -1,6 +1,6 @@
 ---
 import '../../../styles/detail-vk.css';
-import CaseVK from '../../../components/CaseVK.astro';
+import CaseVK from '../../../components/CaseVKShowcase.astro';
 import {demoCases} from '../../../data/demoCases.js';
 export function getStaticPaths(){return Object.keys(demoCases).map(business=>({params:{business},props:{data:demoCases[business]}}))}
 const {data}=Astro.props;const {business}=Astro.params;const base=import.meta.env.BASE_URL.replace(/\/$/,'');const asset=(file)=>`${base}/images/cases/${business}/${file}`;const back=`${base}/work/${business}/`;const website=`${base}/demo/${business}/`;
