@@ -1,7 +1,14 @@
 {
-  "name":"kuznecoff-portfolio",
-  "version":"0.1.0",
-  "type":"module",
-  "scripts":{"dev":"astro dev","build":"astro build","preview":"astro preview"},
-  "dependencies":{"astro":"^5.0.0"}
+  "name": "kuznecoff-portfolio",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "simple-icons": "^16.38.1"
+  }
 }
