@@ -1,0 +1,28 @@
+---
+const { ceiling = false, asset, part } = Astro.props;
+const options = ceiling ? [
+  ['01','Ровная матовая поверхность','Спокойный фон для мебели и стен. Подходит, когда потолок не должен перетягивать внимание.'],
+  ['02','Теневой зазор','Аккуратная линия по периметру вместо заметного плинтуса. Важно заранее проверить геометрию стен.'],
+  ['03','Световые линии','Помогают выделить зоны и организовать свет без громоздких люстр. Нужен план электрики до монтажа.'],
+] : [
+  ['01','В спальню','Учитываем шум улицы, проветривание и удобство открывания.'],
+  ['02','На кухню','Подбираем створки с учётом мебели, подоконника и частого проветривания.'],
+  ['03','На балкон','Сначала уточняем, нужен ли тёплый контур или защита от осадков.'],
+];
+const checklist = ceiling ? ['Размеры и геометрия комнаты','Высота мебели и встроенных шкафов','Расположение карнизов и светильников','Доступ к коммуникациям'] : ['Размеры проёма и количество створок','Состояние стен и монтажного шва','Стеклопакет, уплотнение и фурнитура','Откосы, подоконник и отлив'];
+---
+{part === 'options' && <section class:list={['landing-extra','extra-options', {olive:ceiling}]}>
+  <div class="extra-heading"><div><span>ПОДБОР РЕШЕНИЯ</span><h2>{ceiling?'Не просто полотно. Часть вашего интерьера':'Окна под ваш образ жизни'}</h2></div><p>{ceiling?'Сначала определяем желаемый эффект, затем подбираем конструкцию и свет.':'У разных помещений разные требования. Не обязательно выбирать одну комплектацию для всех окон.'}</p></div>
+  <div class="extra-grid">{options.map(([n,h,p])=><article><span>{n}</span><h3>{h}</h3><p>{p}</p><a href="#estimate">Рассчитать вариант ↗</a></article>)}</div>
+</section>}
+{part === 'check' && <section class:list={['landing-extra','extra-check',{olive:ceiling}]}>
+  <img src={asset('art-photo-2.webp')} alt={ceiling?'Детали освещения в интерьере':'Детали оконной конструкции'} loading="lazy"/>
+  <div><span>ДО НАЧАЛА РАБОТ</span><h2>{ceiling?'Четыре вещи, которые лучше согласовать заранее':'Что проверяем перед заказом окон'}</h2><p>Так проще сравнить предложения по одинаковому составу работ и избежать неожиданных позиций в смете.</p><ul>{checklist.map(item=><li>{item}</li>)}</ul><a class="extra-btn" href="#contact">Получить консультацию ↗</a></div>
+</section>}
+{part === 'cta' && <section class:list={['landing-extra','extra-cta',{olive:ceiling}]}>
+  <div><span>НЕ УВЕРЕНЫ В ВЫБОРЕ?</span><h2>{ceiling?'Покажите нам ваш интерьер':'Не знаете, ремонтировать или менять?'}</h2><p>{ceiling?'Начать можно с плана комнаты. Обсудим свет, фактуру и бюджет без сложных технических терминов.':'Опишите проблему или пришлите фото. Поможем понять, какие варианты стоит рассмотреть до заказа.'}</p></div>
+  <a class="extra-btn" href="#contact">Обсудить задачу ↗</a>
+</section>}
+<style>
+.landing-extra{--ex:#246ca5;--ex-bg:#e7eff4;--ex-dark:#17334c;padding:clamp(45px,6vw,90px) 5vw;box-sizing:border-box}.landing-extra.olive{--ex:#5a654a;--ex-bg:#e4e1d4;--ex-dark:#303b2d}.landing-extra span{font-size:12px;font-weight:700;letter-spacing:.13em;color:var(--ex)}.extra-heading{display:grid;grid-template-columns:2fr 1fr;gap:25px;align-items:end;margin-bottom:35px}.extra-heading h2,.extra-check h2,.extra-cta h2{margin:14px 0!important}.extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.extra-grid article{background:white;border:1px solid #0001;border-radius:16px;padding:clamp(20px,3vw,35px);display:flex;flex-direction:column;gap:14px}.extra-grid article>span{font-size:26px}.extra-grid article a{margin-top:auto;padding-top:14px;color:var(--ex);font-weight:700;text-decoration:none}.extra-check{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;background:var(--ex-bg)}.extra-check img{width:100%;aspect-ratio:1.15;object-fit:cover;border-radius:16px}.extra-check ul{padding:0;list-style:none;display:grid;gap:10px;margin:25px 0}.extra-check li{border-bottom:1px solid #0002;padding:0 0 12px;display:flex;gap:12px}.extra-check li:before{content:'✓';color:var(--ex);font-weight:700}.extra-btn{display:inline-flex;align-items:center;justify-content:center;align-self:start;background:var(--ex-dark);color:white!important;border-radius:8px;padding:15px 22px;font-weight:700;text-decoration:none;white-space:normal}.extra-cta{background:var(--ex-dark);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px}.extra-cta p,.extra-cta span{color:#ffffffc9!important}.extra-cta div{max-width:750px}.extra-cta .extra-btn{background:white;color:var(--ex-dark)!important;flex-shrink:0;align-self:center}@media(max-width:780px){.extra-heading,.extra-grid,.extra-check{grid-template-columns:1fr}.extra-cta{display:grid}.extra-cta .extra-btn{justify-self:start}}
+</style>
