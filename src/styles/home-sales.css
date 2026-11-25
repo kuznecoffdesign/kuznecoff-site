@@ -1,5 +1,5 @@
 .sales-home .hero-eyebrow{font-size:13px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:#aaa;margin-bottom:16px}
-.sales-home .offer-hero .hero-text h1{font-size:clamp(42px,5.05vw,77px);line-height:1.04;letter-spacing:-.06em;text-wrap:balance}
+.sales-home .offer-hero .hero-text h1{font-size:clamp(42px,4.55vw,74px);line-height:1.04;letter-spacing:-.06em;text-wrap:initial}
 .sales-home .offer-hero .hero-text h1 span{display:block;color:#a5a5a4}
 .sales-home .offer-hero .hero-text>p{max-width:55ch;font-size:clamp(17px,1.5vw,21px);line-height:1.5}
 .sales-home .section-head h2{font-size:clamp(37px,4.75vw,71px);line-height:1.04;letter-spacing:-.055em;max-width:20ch}
@@ -28,6 +28,13 @@
 .sales-trust-grid h3{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.04em;line-height:1.1;margin:0 0 10px}
 .sales-trust-grid p{font-size:16px;line-height:1.5;color:#b6b6b3;margin:0}
 .sales-home .process{border-top:1px solid #333}
+.sales-home .sales-icon svg{width:25px!important;height:25px!important;flex:none}
+.sales-home .audit-list svg{width:23px!important;height:23px!important;flex:0 0 23px}
+.sales-home .audit-list>div{min-width:0}
+.sales-home .sales-system-grid img{aspect-ratio:1!important;max-height:none!important}
+.sales-home .sales-heading h2 em{color:#777}
+.sales-home .sales-system .sales-heading h2 em{color:#a4a4a4}
+@media(min-width:1100px){.sales-home .offer-hero .hero-text h1 span{white-space:nowrap}}
 .sales-home a:focus-visible,.sales-home button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 @media(max-width:900px){.sales-home .package-description{min-height:0}.about-sales-intro{grid-template-columns:1fr;gap:22px}.sales-trust-grid{grid-template-columns:1fr}.work-cta{flex-wrap:wrap}.sales-home .section-head h2{max-width:none}}
 @media(max-width:520px){.sales-home .offer-hero .hero-text h1{font-size:clamp(37px,9vw,47px)}.sales-home .hero-eyebrow{font-size:11px;line-height:1.4}.sales-home .section-head h2{font-size:clamp(34px,8vw,43px)}.sales-home .project-caption{min-height:0}.work-cta{padding:20px}.work-cta .button{width:100%;justify-content:center}.about-name{padding:18px}.about-monogram{width:58px;height:58px}}
