@@ -38,3 +38,26 @@
 .sales-home a:focus-visible,.sales-home button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 @media(max-width:900px){.sales-home .package-description{min-height:0}.about-sales-intro{grid-template-columns:1fr;gap:22px}.sales-trust-grid{grid-template-columns:1fr}.work-cta{flex-wrap:wrap}.sales-home .section-head h2{max-width:none}}
 @media(max-width:520px){.sales-home .offer-hero .hero-text h1{font-size:clamp(37px,9vw,47px)}.sales-home .hero-eyebrow{font-size:11px;line-height:1.4}.sales-home .section-head h2{font-size:clamp(34px,8vw,43px)}.sales-home .project-caption{min-height:0}.work-cta{padding:20px}.work-cta .button{width:100%;justify-content:center}.about-name{padding:18px}.about-monogram{width:58px;height:58px}}
+
+.sales-home .offer-hero .hero-text h1 .hero-comma{display:inline;letter-spacing:0;margin-left:.035em}
+.sales-home + .contact-new h2{font-size:clamp(34px,4.35vw,66px)!important;letter-spacing:-.045em;line-height:1.06}
+.sales-home + .contact-new h2 span{display:block;margin-top:0}
+.about-portrait{width:88px;height:88px;object-fit:cover;border-radius:16px;flex:none}
+.sales-home .sales-trust-grid article{display:flex;flex-direction:column;align-items:flex-start;background:#f7f7f4;color:#171717;border-color:#e2e2df;min-width:0}
+.sales-home .sales-trust-grid p{color:#626262}
+.sales-home .trust-icon,.sales-home .method-card-top .sales-icon{width:64px;height:64px;border-radius:18px;background:#e8e8e4;color:#282828;transition:transform .35s ease,background .35s ease}
+.sales-home .trust-icon svg,.sales-home .method-card-top .sales-icon svg{width:32px!important;height:32px!important}
+.sales-home .sales-method .method-layout{display:block}
+.sales-home .sales-method .method-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.sales-home .sales-method .method-list article{display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-height:255px;padding:clamp(20px,2.5vw,32px);border-radius:24px}
+.method-card-top{display:flex;align-items:flex-start;justify-content:space-between;width:100%}
+.method-card-top small{font-size:14px;font-variant-numeric:tabular-nums}
+.sales-home .sales-method .method-list h3{font-size:clamp(22px,2.15vw,30px);line-height:1.12;margin:0 0 12px}
+.sales-home .sales-pain .sales-heading h2{font-size:clamp(35px,4.5vw,68px)}
+.sales-home .pain-preview{padding:0;overflow:hidden;background:#e9e9e5}
+.sales-home .pain-preview img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;transition:transform .55s ease}
+.sales-home .sales-trust-grid article,.sales-home .method-list article,.sales-home .sales-pain-grid article{transition:opacity .6s ease,transform .5s ease,box-shadow .35s ease}
+@media(hover:hover){.sales-home .sales-trust-grid article.in:hover,.sales-home .method-list article.in:hover,.sales-home .sales-pain-grid article.in:hover{transform:translateY(-6px);box-shadow:0 16px 36px #00000018}.sales-home .sales-trust-grid article:hover .trust-icon,.sales-home .method-list article:hover .sales-icon{transform:scale(1.08) rotate(-5deg);background:#dcdcd6}.sales-home .sales-pain-grid article:hover img{transform:scale(1.045)}}
+@media(max-width:1100px){.sales-home .sales-method .method-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.sales-home .sales-method .method-list{grid-template-columns:1fr}.sales-home .sales-method .method-list article{min-height:0;gap:22px}.about-portrait{width:74px;height:74px}.sales-home .sales-pain .sales-heading h2{font-size:clamp(31px,7.8vw,44px)}}
+@media(prefers-reduced-motion:reduce){.sales-home .sales-trust-grid article,.sales-home .method-list article,.sales-home .sales-pain-grid article,.sales-home .trust-icon,.sales-home .method-card-top .sales-icon,.sales-home .pain-preview img{transition:none!important;transform:none!important}}
