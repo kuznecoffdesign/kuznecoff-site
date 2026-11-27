@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Тепло дома">
+  <rect width="400" height="400" rx="46" fill="#123D68"/>
+  <path d="M83 173 200 76l117 97v143H83z" fill="#fff"/>
+  <path d="M103 183 200 103l97 80v113H103z" fill="#123D68"/>
+  <path d="M125 176h67v120h-67zM208 176h67v120h-67z" fill="#c5eaff"/>
+  <path d="M125 176h67v47h-67zM208 176h67v47h-67z" fill="#fff"/>
+  <path d="M208 176h67v120l-67-22z" fill="#42A5E5"/>
+  <path d="M222 231v20" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M83 316h234" stroke="#F5B65A" stroke-width="12" stroke-linecap="round"/>
+</svg>

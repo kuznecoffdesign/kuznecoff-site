@@ -1,4 +1,6 @@
 ---
 const {project,large=false}=Astro.props;
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const imagePath=(file)=>`${base}/images/cases/${project.slug}/${file}`;
 ---
-<div class:list={['cover',project.theme,{'cover--large':large}]}><div class="cover-grid"></div>{project.theme==='detail' && <div class="cover-photo"/>}<div class="cover-type"><strong>{project.name}</strong><small>{project.industry}</small></div><span class="cover-tag">{project.status==='Реальный проект'?'Архив / эскиз обложки':'Концепция / в разработке'}</span></div>
+<div class:list={['cover','cover-real','cover-poster',project.theme,{'cover--large':large}]}><div class="cover-poster-art" style={`background-image:url('${imagePath('cover.webp')}')`} aria-hidden="true"></div><div class="poster-title"><span>{project.types.length===1&&project.types[0]==='Карты'?'Яндекс Карты':project.industry}</span><strong>{project.name}</strong><small>{project.types.length===1&&project.types[0]==='Карты'?'Комплексная упаковка':project.types.join(' / ')}</small></div></div>

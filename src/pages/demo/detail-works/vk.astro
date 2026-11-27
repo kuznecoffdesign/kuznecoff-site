@@ -1,0 +1,30 @@
+---
+import '../../../styles/detail-vk.css';
+import CaseVKShowcase from '../../../components/CaseVKShowcase.astro';
+import {services,posts,money} from '../../../data/detailWorks.js';
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const back=base+'/work/detail/';
+const website=base+'/demo/detail-works/';
+const data={name:'Detail Works',tag:'Студия детейлинга',services:services.map(s=>[s.name,s.short,'от '+money(s.price)]),posts:posts.map(p=>[p.title,p.text])};
+const resolve=(file:string)=>{
+ if(file==='art-cover.webp') return 'dw4-vk-cover.webp';
+ if(file==='art-avatar.webp') return 'dw2-vk-avatar.webp';
+ const product=file.match(/^art-render-(\d+)\.webp$/);
+ if(product) return 'dw3-vk-product-'+services[Number(product[1])].id+'.webp';
+ const post=file.match(/^art-post-(\d+)\.webp$/);
+ if(post) return posts[Number(post[1])].image;
+ return file;
+};
+const asset=(file:string)=>base+'/images/cases/detail/'+resolve(file);
+---
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex,nofollow"/><title>Detail Works — оформление сообщества ВКонтакте</title></head>
+<body class="vk-showcase detail">
+ <a class="case-return" href={back}>← К кейсу</a>
+ <CaseVKShowcase {data} {asset} {back} {website} business="detail">
+   <section class="vk-section" id="pinned"><div class="vk-section-head"><span>04 / Знакомство</span><h2>Закреплённая запись</h2></div><article class="vk-post"><div class="vk-post-copy"><h3>Не знаете, какая услуга нужна автомобилю?</h3><p>Если лак потускнел, появилась мелкая риска или салон требует ухода, не обязательно заказывать весь комплекс. Начнём с состояния автомобиля и подберём только нужные работы.</p><p>Пришлите марку, модель и пару фотографий проблемных зон. Объясним разницу между полировкой, защитной плёнкой и керамикой, сориентируем по бюджету и времени.</p></div></article></section>
+   <section class="vk-section"><div class="vk-section-head"><span>05 / Помощь в выборе</span><h2>Не все покрытия решают одну задачу</h2></div><div class="vk-posts"><article class="vk-post"><div class="vk-post-copy"><h3>Плёнка или керамика: что выбрать?</h3><p>Если вы часто ездите по трассе и переживаете за сколы, приоритет — механическая защита уязвимых участков. Если сложно поддерживать блеск и чистоту между мойками, рассмотрите керамику. Это разные задачи, поэтому сравнивать покрытия только по стоимости неправильно.</p><p>До выбора расскажите, где и как используете автомобиль. Подберём вариант без лишних работ.</p></div></article><article class="vk-post"><div class="vk-post-copy"><h3>Почему нельзя назвать точную цену по модели авто?</h3><p>На стоимость полировки влияет состояние лака, количество повреждений и сложность кузова. Два одинаковых автомобиля могут требовать разного объёма работ. Мы начинаем с оценки, согласуем объём и не обещаем убрать глубокие повреждения обычной полировкой.</p><p>Фото при дневном свете поможет дать предварительный ориентир.</p></div></article></div></section>
+ </CaseVKShowcase>
+</body>
+</html>

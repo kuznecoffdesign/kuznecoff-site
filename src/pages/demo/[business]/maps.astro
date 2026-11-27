@@ -1,0 +1,8 @@
+---
+import '../../../styles/detail-demo.css';
+import MapCatalog from '../../../components/MapCatalog.astro';
+import {demoCases} from '../../../data/demoCases.js';
+export function getStaticPaths(){return Object.keys(demoCases).map(business=>({params:{business},props:{data:demoCases[business]}}))}
+const {data}=Astro.props;const {business}=Astro.params;const base=import.meta.env.BASE_URL.replace(/\/$/,'');const asset=(file)=>`${base}/images/cases/${business}/${file}`;const back=`${base}/work/${business}/`;const website=`${base}/demo/${business}/`;
+---
+<!doctype html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex,nofollow"/><title>{data.name} — карточка на картах</title></head><body class="dw-mock-page"><a class="case-return" href={back}>← К кейсу</a><MapCatalog data={data} asset={asset} back={back} website={website} business={business}/></body></html>
